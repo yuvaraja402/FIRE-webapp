@@ -1,6 +1,6 @@
 # Ignoring Node.js files and directories
 # Ignore node_modules directory
-node_modules/
+client/node_modules/
 
 # Ignore package.json and package-lock.json files
 package.json
