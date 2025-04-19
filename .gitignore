@@ -1,4 +1,23 @@
-# Local .terraform directories
+# Ignoring Node.js files and directories
+# Ignore node_modules directory
+node_modules/
+
+# Ignore package.json and package-lock.json files
+package.json
+package-lock.json
+
+# Ignore environment variables file (if any)
+.env
+
+# Ignore log files
+*.log
+
+# Ignore build directory (if any)
+build/
+
+
+# Ignoring Terraform files and directories
+# Ignore Local .terraform directories
 **/.terraform/*
 
 # .tfstate files
