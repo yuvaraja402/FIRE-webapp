@@ -2,10 +2,8 @@ name: Docker Build CI
 
 on:
   push:
-    branches: [ "main" ]
     branches: [ "stage/build-v1" ]
   pull_request:
-    branches: [ "main" ]
     branches: [ "stage/build-v1" ]
 
 jobs:
