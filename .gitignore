@@ -3,11 +3,9 @@
 
 # Ignore package.json and package-lock.json in the client directory (if you don't want to track them)
 # These files will be ignored for the client directory specifically
-/client/package.json
 /client/package-lock.json
 
 # Ignore package.json and package-lock.json in the root directory (if you don't want to track them)
-package.json
 package-lock.json
 
 # Ignore environment variables file (if any)
