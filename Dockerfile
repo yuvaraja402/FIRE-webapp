@@ -5,15 +5,15 @@ FROM node:18-alpine
 WORKDIR /app
 
 # Copy package files and install dependencies
-COPY client/package*.json ./
-
+#COPY client/package*.json ./
+# Copy the rest of the client app
+COPY client/ .
 RUN npm install
 
-# Copy the rest of the client app into the container
-COPY client/ .
 
-# Expose React dev server port (optional)
+
+# Expose port (React dev server runs here)
 EXPOSE 3000
 
-# Start the React dev server
+# Start the React development server
 CMD ["npm", "start"]
