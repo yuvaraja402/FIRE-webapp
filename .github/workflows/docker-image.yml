@@ -1,17 +1,16 @@
-name: Docker Image CI
+name: Docker Build CI
 
 on:
   push:
+    branches: [ "main" ]
     branches: [ "stage/build-v1" ]
   pull_request:
+    branches: [ "main" ]
     branches: [ "stage/build-v1" ]
 
 jobs:
-
   build:
-
     runs-on: ubuntu-latest
-
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image for Linux AMD64
