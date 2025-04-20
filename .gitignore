@@ -1,8 +1,12 @@
-# Ignoring Node.js files and directories
 # Ignore node_modules directory
-client/node_modules/
+/client/node_modules/
 
-# Ignore package.json and package-lock.json files
+# Ignore package.json and package-lock.json in the client directory (if you don't want to track them)
+# These files will be ignored for the client directory specifically
+/client/package.json
+/client/package-lock.json
+
+# Ignore package.json and package-lock.json in the root directory (if you don't want to track them)
 package.json
 package-lock.json
 
