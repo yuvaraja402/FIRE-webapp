@@ -1,4 +1,4 @@
-###### Use official Node.js Alpine image
+# Use official Node.js Alpine image
 FROM node:18-alpine
 
 # Set working directory

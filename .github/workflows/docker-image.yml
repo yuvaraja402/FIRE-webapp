@@ -1,0 +1,16 @@
+name: Docker Build CI
+
+on:
+  push:
+    branches: [ "stage/build-v1" ]
+  pull_request:
+    branches: [ "stage/build-v1" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the Docker image for Linux AMD64
+      run: docker buildx build --file Dockerfile --platform linux/amd64 -t fire-webapp-amd64:v1
+#:$(date +%s)
