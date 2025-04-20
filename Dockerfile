@@ -1,26 +1,19 @@
-# Use an official Node.js runtime as a parent image (Node 18 with Alpine)
+# Use official Node.js Alpine image
 FROM node:18-alpine
 
-# Set the working directory in the container
+# Set working directory
 WORKDIR /app
 
-# Copy the package.json and package-lock.json (if it exists)
-COPY package*.json ./
+# Copy package files and install dependencies
+COPY client/package*.json ./
 
-# Install the dependencies
 RUN npm install
 
-# Copy the rest of the app's source code into the container
-COPY . .
+# Copy the rest of the client app into the container
+COPY client/ .
 
-# Build the React app
-RUN npm run build
-
-# Install a simple HTTP server to serve the build (optional but recommended for serving static files)
-RUN npm install -g serve
-
-# Expose the port that the app will run on
+# Expose React dev server port (optional)
 EXPOSE 3000
 
-# Command to run the app in production mode
-CMD ["serve", "-s", "build", "-l", "3000"]
+# Start the React dev server
+CMD ["npm", "start"]
