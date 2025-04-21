@@ -53,3 +53,6 @@ jobs:
           terraform plan \
             -var="ecr_repo_name=fire-webapp-repo" \
             -var="ecr_region=eu-west-1"
+          terraform apply -auto-approve \
+            -var="ecr_repo_name=fire-webapp-repo" \
+            -var="ecr_region=eu-west-1"
