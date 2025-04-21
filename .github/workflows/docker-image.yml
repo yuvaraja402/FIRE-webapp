@@ -32,7 +32,8 @@ jobs:
     needs: build
     uses: yuvaraja402/AWS_Infrastructure_Templates/.github/workflows/ecr-creation.yml@stage/ECR_templates
     with:
-        aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        ecr_region: 'eu-west-1'
-        ecr_repo_name: 'fire-webapp-repo'
+      ecr_region: 'eu-west-1'
+      ecr_repo_name: 'fire-webapp-repo'
+    secrets:
+      aws_access_key_id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      aws_secret_access_key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
