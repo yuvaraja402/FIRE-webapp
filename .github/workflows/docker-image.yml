@@ -37,7 +37,12 @@ jobs:
       - name: Clone ECR Templates Repo
         run: git clone --branch stage/ECR_templates https://github.com/yuvaraja402/AWS_Infrastructure_Templates.git
 
-      - name: Setup Terraform Directory
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v2.0.3
+        with:
+          terraform_version: 1.5.7
+        
+      - name: Run Terraform to Create ECR Repo
         working-directory: ./AWS_Infrastructure_Templates/ECR
         run: |
           terraform init
